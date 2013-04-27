@@ -4,3 +4,6 @@
 *.jar
 *.war
 *.ear
+/GUC_1-ejb/build/
+/GUC_1-war/build/
+/GUC_1-ejb/dist/
