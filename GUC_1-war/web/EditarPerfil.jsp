@@ -1,7 +1,7 @@
 <%-- 
     Document   : EditarPerfil
     Created on : 27-abr-2013, 20:09:15
-    Author     : Juanito
+    Author     : Juan R
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
