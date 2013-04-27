@@ -14,15 +14,13 @@ and open the template in the editor.
 	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet'>
 	<link rel="stylesheet" href="css/style.css">
 
-	<!-- Optimize for mobile devices -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
     </head>
     <body>
         <!-- TOP BAR -->
 	<div id="top-bar">
 		
 		<div class="page-full-width strong em">
-                    <a href="#" id="company-branding" class="fl"><img src="images/logo_DIPUTACION.jpg" alt="Blue Hosting" /></a>
+                    <a href="#" id="company-branding" class="fl"><img src="images/logo_DIPUTACION.jpg"/></a>
                     <div id="cabz">
                     <h1>Diputación provincial de Málaga
                         <br>Área de modernización local
@@ -38,13 +36,15 @@ and open the template in the editor.
         <br><br>
         <form method="get" action="AltaUsuario" name="datos">
             <label for="nombre">nombre</label>
-            <input name="nombre" type="text" data-default="Buscar" class="text alignleft clearField suggestTerms clearFieldActive" value="">
-            <input name ="apellido1" type="text" value="Primer apellido">
-            <input name="apellido2" type="text" value="Segundo apellido">
+            <input name="nombre" type="text">
             <br><br>
             
-            <label for="dni">nif</label>
-            <input name="dni" type="text" value="Dni">
+            <label for="apellidos">apellidos</label>
+            <input name ="apellidos" type="text">
+            <br><br>
+            
+            <label for="nif">nif</label>
+            <input name="nif" type="text">
             <br><br>
            
             <label for="email">correo electr&oacute;nico</label>
@@ -55,7 +55,7 @@ and open the template in the editor.
             <input name="direccion" type="text">
             <br><br>
             
-            <label for="telefono">telef&oacute;no</label>
+            <label for="telefono">tel&eacute;fono</label>
             <input name="telefono" type="text">
             <br><br>
                 
@@ -68,6 +68,7 @@ and open the template in the editor.
             <select name="rol">
                 <option> Administrador </option>
                 <option> Controlador </option>
+                <option> Controlador ayuntamiento </option>
                 <option> Jefe de servicio </option>
                 <option> Usuario </option>
             </select>
@@ -77,6 +78,6 @@ and open the template in the editor.
             <select name="ayuntamiento"><option>none</option></select>
             <br><br>
             
-        <button>Enviar</button></form>
+        <input type="submit" class="button round blue">
     </body>
 </html>

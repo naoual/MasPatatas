@@ -51,14 +51,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <br><br> 
         
         <div>
-      Buscar usuario <br><br>
-      Criterio de b&uacute;squeda <select name="busqueda"> <option>DNI</option> 
-          <option>Nombre</option> <option>Apellidos</option> <option>Rol</option>
-          </select>
-      <input name="campo" type="text">
-      <button>Buscar</button>
-      <br><br>
-      
+            <label for="buscar" > <font color="#2069b4"><B> BUSCAR USUARIO </B></font> </label>
+            <br><br>
+            <fieldset>
+                <label> Criterio de b&uacute;squeda </label>
+                <select name="busqueda" class="round"> <option>DNI</option> 
+                <option>Nombre</option> <option>Apellidos</option> <option>Rol</option>
+            </select>
+            <input name="campo" type="text" class="round" autofocus>
+            <button>Buscar</button>
+            </fieldset>
+            
+            <br><br>
+      </div>
+        <br><br><br> 
+      <div>
+          <label for="listado"><font color="#2069b4"> <B> LISTADO DE USUARIOS </B> </font></label>
+          <br>
   	<table border="1">
   		<tbody>
   		<tr>
