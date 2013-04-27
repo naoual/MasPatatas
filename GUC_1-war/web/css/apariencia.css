@@ -1,0 +1,58 @@
+/* 
+    Document   : apariencia
+    Created on : 18-ene-2013, 20:33:32
+    Author     : Pepe Moreno
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+h1{
+    text-align: center;
+}
+
+table{
+    border: 2px; 
+}
+#fomularioAlimentos{
+   width: 400px;
+   float: left;
+}
+#insertarAlimentosNombres{
+    float: left;
+}
+#insertarAlimentosDatos{
+}
+#Mostrar{
+    width: 100%;
+    height: 350px;
+    float: next;
+}
+
+#codQR{
+    
+    width: 180px;
+    height: 180px;
+    margin-left:100px
+}
+
+#map{
+    width: 400px;
+    height: 300px;
+}
+
+#qr { 
+    width: 180px; 
+    height: 180px;
+    margin-left:100px 
+}
+#imgQr {
+    width: 180px; 
+    height: 180px
+}
+
+#contactoMandar {
+    margin-left:50px
+}
