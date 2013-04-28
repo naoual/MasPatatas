@@ -85,8 +85,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <td> <%= (String)request.getParameter("perfil") %> </td>
                     <td> <%= (String)request.getParameter("gasto") %> </td>
                     <td> <a href="ConsultarPerfil.jsp">Consultar</a> </td>
-                    <td> <a href="EditarPerfilJsp.jsp">Editar</a> </td>
-                    <td> <a href="EditarPerfilJsp.jsp">Eliminar</a> </td>
+                    <td> <a href="EditarPerfil.jsp">Editar</a> </td>
+                    <td> <a href="EditarPerfil.jsp">Eliminar</a> </td>
                 </tr>
                 <% } %>
 	
