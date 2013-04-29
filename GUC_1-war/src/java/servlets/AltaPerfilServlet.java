@@ -4,8 +4,14 @@
  */
 package servlets;
 
+import app.dao.PerfilgastoFacade;
+import app.entity.Perfilgasto;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+import javax.ejb.EJB;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,6 +25,14 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "AltaPerfilServlet", urlPatterns = {"/AltaPerfil"})
 public class AltaPerfilServlet extends HttpServlet {
+    
+    @PersistenceContext(unitName = "GUC_1-ejbPU" )
+    private EntityManager em;
+    
+    @EJB
+    private PerfilgastoFacade perfilgastofacade;
+    @EJB
+    private Perfilgasto perfil;
 
     /**
      * Processes requests for both HTTP
@@ -32,6 +46,8 @@ public class AltaPerfilServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+       
+      
        String perfil = request.getParameter("idperfil");
        String gasto = request.getParameter("gasto");
        
