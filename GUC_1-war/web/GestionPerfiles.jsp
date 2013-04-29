@@ -58,7 +58,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <br><br>
             <fieldset>
                 <label> Criterio de b&uacute;squeda </label>
-                <select name="busqueda" class="round"> <option>DNI</option> 
+                <select name="busqueda" class="round"> 
                 <option>Perfil</option> <option>Gasto</option>
             </select>
             <input name="campo" type="text" class="round" autofocus>
