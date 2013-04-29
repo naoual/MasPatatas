@@ -25,13 +25,10 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "ListaPerfilesServlet", urlPatterns = {"/ListaPerfilesServlet"})
 public class ListaPerfilesServlet extends HttpServlet {
-    @PersistenceContext(unitName = "GUC_1-ejbPU" )
-    private EntityManager em;
     
     @EJB
     private PerfilgastoFacade perfilgastofacade;
-    @EJB
-    private Perfilgasto perfil;
+   
 
 
     /**
