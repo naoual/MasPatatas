@@ -4,6 +4,10 @@
     Author     : Juan R
 --%>
 
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.Collection"%>
+<%@page import="app.entity.Perfilgasto"%>
+
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -79,11 +83,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         <td>&nbsp;</td>
 		</tr>
                 <% 
-                    if((String)request.getParameter("perfil")!=null){
+                    Collection lista = (Collection)request.getAttribute("perfiles");
+                    for(Iterator it = lista.iterator(); it.hasNext();){
+                        Perfilgasto per = (Perfilgasto) it.next();
+                    
                 %>
                 <tr>
-                    <td> <%= (String)request.getParameter("perfil") %> </td>
-                    <td> <%= (String)request.getParameter("gasto") %> </td>
+                    <td> <%=per.getIdPerfilGasto() %> </td>
+                    <td> <%=per.getTipoSaldo() %> </td>
                     <td> <a href="ConsultarPerfil.jsp">Consultar</a> </td>
                     <td> <a href="EditarPerfil.jsp">Editar</a> </td>
                     <td> <a href="EditarPerfil.jsp">Eliminar</a> </td>
