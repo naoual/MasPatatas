@@ -26,13 +26,11 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "AltaPerfilServlet", urlPatterns = {"/AltaPerfil"})
 public class AltaPerfilServlet extends HttpServlet {
     
-    @PersistenceContext(unitName = "GUC_1-ejbPU" )
-    private EntityManager em;
+    
     
     @EJB
     private PerfilgastoFacade perfilgastofacade;
-    @EJB
-    private Perfilgasto perfil;
+    
 
     /**
      * Processes requests for both HTTP
@@ -53,6 +51,10 @@ public class AltaPerfilServlet extends HttpServlet {
        
        request.setAttribute("idperfil", perfil);
        request.setAttribute("gasto", gasto);
+       
+       Perfilgasto pg = new Perfilgasto(Integer.parseInt(perfil), gasto, false);
+       
+       perfilgastofacade.create(pg);
        
        RequestDispatcher rd;
        rd = this.getServletContext().getRequestDispatcher("/GestionPerfiles.jsp");
