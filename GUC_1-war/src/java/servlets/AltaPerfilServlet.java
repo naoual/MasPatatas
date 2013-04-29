@@ -5,6 +5,7 @@
 package servlets;
 
 import app.dao.PerfilgastoFacade;
+import app.dao.PerfilgastoFacadeLocal;
 import app.entity.Perfilgasto;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -29,7 +30,7 @@ public class AltaPerfilServlet extends HttpServlet {
     
     
     @EJB
-    private PerfilgastoFacade perfilgastofacade;
+    private PerfilgastoFacadeLocal perfilgastofacade;
     
 
     /**
@@ -57,7 +58,7 @@ public class AltaPerfilServlet extends HttpServlet {
        perfilgastofacade.create(pg);
        
        RequestDispatcher rd;
-       rd = this.getServletContext().getRequestDispatcher("/GestionPerfiles.jsp");
+       rd = this.getServletContext().getRequestDispatcher("/ListaPerfilesServlet");
        
        rd.forward(request, response);
        

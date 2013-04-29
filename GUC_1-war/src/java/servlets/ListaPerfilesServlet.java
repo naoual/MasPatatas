@@ -5,6 +5,7 @@
 package servlets;
 
 import app.dao.PerfilgastoFacade;
+import app.dao.PerfilgastoFacadeLocal;
 import app.entity.Perfilgasto;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -27,7 +28,7 @@ import javax.servlet.http.HttpServletResponse;
 public class ListaPerfilesServlet extends HttpServlet {
     
     @EJB
-    private PerfilgastoFacade perfilgastofacade;
+    private PerfilgastoFacadeLocal perfilgastofacade;
    
 
 
